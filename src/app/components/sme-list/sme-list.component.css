@@ -1,0 +1,22 @@
+
+.filter {
+  font-size: 14px;
+  width: 100%;
+  margin-left: 10px;
+  padding-inline:10px;
+}
+
+table {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
+}
+

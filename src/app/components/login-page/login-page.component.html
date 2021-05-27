@@ -1,0 +1,71 @@
+<div>
+  <!-- Heading Row -->
+  <div class="text-center">
+    <p style="font-size: x-large;">Login</p>
+  </div>
+
+  <hr>
+  <!-- Login form -->
+  <form>
+    <label>
+      <b>Email Address </b><label style="color:red">*</label>
+
+    </label>
+    <input class="form-control"
+           id="email"
+           #email="ngModel"
+           type="text"
+           [(ngModel)]="user.emailAddress"
+           placeholder="Email@email.com"
+           name="Email"
+           ngDefaultControl
+           required>
+
+    <div class="align">
+      <label>
+        <b>Password</b><label style="color:red">*</label>
+
+      </label>
+      <input class="form-control pass"
+             id="pass"
+             #pass="ngModel"
+             type="password"
+             [(ngModel)]="user.password"
+             placeholder="*****"
+             name="pass"
+             ngDefaultControl
+             required />
+
+    </div>
+
+    <hr>
+
+    <div style="text-align:center">
+      <button mat-button color="primary"
+              class="button"
+              (click)="validateFields()">
+
+        Login
+      </button>
+    </div>
+  </form>
+
+  <div style="text-align:center">
+    <br />
+    -------------------------------------------------------  OR  --------------------------------------------------------
+    <br />
+
+    <button mat-button color="primary"
+            class="button"
+            (click)="loginWithGoogle()">
+    <img src="../../assets/img/loginGoogle.PNG" width="200" />
+    </button>
+
+    <button mat-button color="accent"
+            class="button"
+            (click)="loginWithMicrosoft()">
+      <img src="../../assets/img/loginMS.PNG" width="200" />
+    </button>
+  </div>
+ 
+</div>

@@ -1,0 +1,85 @@
+<section class="section">
+  <div class="page-width">
+    <div class="section-heading">
+      <h1 class="section-heading__heading heading--1">Profit margin calculator</h1>
+      <p class="section-heading__subhead heading--2">This easy calculator will help you determine selling prices for your products in order to save money and increase profits</p>
+    </div>
+    <section class="section section--tight">
+      <div class="grid-container">
+        <div class="grid-item grid-6 grid-push-1">
+          <div class="calculator-form">
+            <form id="ProfitCalculatorForm" class="js-form-validate js-calculator-form" action="/tools/profit-margin-calculator/store" accept-charset="UTF-8" method="post" __bizdiag="-1546966008" __biza="W___">
+              <input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="NC8wIS1Jtn-xyrYIapSM8Bsr1uoXIGLiDuMykV9z8SvN3CBIjCm4X7CcdHfnE43bbBoRlcp5URObWp2-cHwq8w">
+              <div class="grid grid--bleed">
+                <div class="grid__item grid__item--mobile-up-half">
+                  <label class="marketing-input-wrapper"><span class="marketing-label marketing-label--in-field marketing-label--floating">Cost of item ($)</span><input [(ngModel)]="var1" type="number" name="cost" id="cost" placeholder="Cost of item ($)" aria-describedby="MessageId_281f" required="required" pattern="[^0-9\.]+" min="0" step="0.01" class="marketing-input marketing-input--floating"></label>
+                  <span class="marketing-form__messages" id="MessageId_281f"><span class="suggest">Cost of item you are going to resell</span></span>
+                </div>
+                <div class="grid__item grid__item--mobile-up-half">
+                  <label class="marketing-input-wrapper"><span class="marketing-label marketing-label--in-field marketing-label--floating">Markup (%)</span><input [(ngModel)]="var2" type="number" name="markup" id="markup" placeholder="Markup (%)" aria-describedby="MessageId_1c10" required="required" pattern="[^0-9\.]+" min="0" step="0.01" class="marketing-input marketing-input--floating"></label>
+                  <span class="marketing-form__messages" id="MessageId_1c10"><span class="suggest">Markup percentage that is used to determine your selling price</span></span>
+                </div>
+              </div>
+              <div class="grid grid--bleed grid--vertically-centered">
+                <div class="grid__item form-button-bar">
+                  <button name="button" type="button" id="reset" class="text-minor body-link reset-calculator" data-ga-event="profit margin calculator" data-ga-action="form" data-ga-label="reset" (click)="clear()">Reset</button>
+                  <input type="submit" name="commit" value="Calculate profit" class="marketing-button marketing-button--small form-section-submit" data-ga-event="profit margin calculator" data-ga-action="form" data-ga-label="submit" data-disable-with="Calculate profit" (click)="calculate()">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="calculator-result js-calculator-result">
+            <h2 class="calculator-result__header">
+              Profit margin calculator results
+            </h2>
+            <div class="grid grid--bleed grid--equal-height">
+              <div class="grid__item grid__item--mobile-up-third calculator-result__block" vertically_centered="true">
+                <h3 class="heading--4">Your sale price</h3>
+                <p id="price" class="heading--2 calculator-result__value">
+                  <label *ngIf="salePrice">{{salePrice}}</label>
+                  <label *ngIf="!salePrice">--</label>
+                </p>
+              </div>
+              <div class="grid__item grid__item--mobile-up-third calculator-result__block" vertically_centered="true">
+                <h3 class="heading--4">Your profit</h3>
+                <p id="profit" class="heading--2 calculator-result__value">
+                  <label *ngIf="prof">{{prof}}</label>
+                  <label *ngIf="!prof">--</label>
+                </p>
+              </div>
+              <div class="grid__item grid__item--mobile-up-third calculator-result__block" vertically_centered="true">
+                <h3 class="heading--4">Gross margin</h3>
+                <p id="margin" class="heading--2 calculator-result__value">
+                  <label *ngIf="grossMargin">{{grossMargin}}%</label>
+                  <label *ngIf="!grossMargin">--</label>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  </section>
+
+  <section class="section section--border">
+    <div class="page-width">
+      <h2 class="text-center gutter-bottom">
+        Need to develop an effective pricing strategy for your business? First, you’ll need to figure out your markups and profit margins.
+      </h2>
+
+      <div class="split-columns">
+        <div class="marketing-markdown" style="font-family: 'Arial Unicode MS'; line-height: 1.5">
+          <p>GrowMore’s easy-to-use profit margin calculator can help you find a profitable selling price for your product.</p><br />
+
+          <p>
+            To start, simply enter your gross cost for each item and what percentage in profit you’d like to make on each sale. After clicking “calculate”, the tool will run those numbers through its profit margin formula to find the final
+            price you should charge your customers.
+          </p><br />
+
+          <p>From there, you can effectively price your products and start profiting off each sale.</p>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,18 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-general-info',
+  templateUrl: './general-info.component.html',
+  styleUrls: ['./general-info.component.css']
+})
+export class GeneralInfoComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+    const top = document.getElementById('target');
+    top.scrollIntoView(true);
+    //top.scrollTop += 500;
+  }
+
+}

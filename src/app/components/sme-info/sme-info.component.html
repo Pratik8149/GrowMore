@@ -1,0 +1,46 @@
+<div class="outlook">
+
+  <div class="header">
+    <h1>SME INFORMATION</h1>
+  </div>
+
+  <div class="logo">
+    <img src="../../assets/img/logos/{{smeinfo.name}}.jpg" alt="image" width="150" height="100">
+    <h1>{{smeinfo.name}}</h1>
+  </div>
+
+  <div class="section">
+
+    <nav class="nav">
+      <div>
+
+        <div class="title">
+          <h1>Sector: {{smeinfo.sector}}</h1>
+          <hr>
+          <div class="logo">
+            <img style="cursor:pointer" src="../../assets/Image/profit.png" alt="image" width="150" height="100" (click)="sectViz()"/>
+            <h3>Click above to view the graph of given sector.</h3>
+          </div>
+          <hr>
+          <div>
+            <h3>{{smeinfo.description}}</h3>
+          </div>
+          <hr>
+        </div>
+
+        <div class="footer">
+          <button mat-raised-button color="primary" (click)="profitCalc()"><h4>Profit Calculator</h4></button>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="sidenav">
+      <ul class="navv ul" style="text-align:center; padding:80px 0px 0px 10px;">
+        <h3>Contact</h3>
+        <li>{{smeinfo.contact}}</li>
+        <li>{{smeinfo.address}}</li>
+        <li>{{smeinfo.email}}</li>
+      </ul>
+    </nav>
+  </div>
+</div>
